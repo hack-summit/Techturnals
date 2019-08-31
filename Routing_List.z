@@ -1,3 +1,6 @@
 /doctor/
 
 /login  {username,password}
+
+/static/<filename>
+

@@ -78,3 +78,22 @@ ROOT_PATH = os.environ.get('ROOT_PATH')<br>
 
 
 
+
+def execute(query):
+ return self.db_cursor.execute(query, args)
+
+def execute_dict( query):
+        result = self.execute(query)
+        column_names = []
+        return_list = []
+        for row in result.description:
+            column_names.append(row[0])
+        result = result.fetchall()
+        for res in xrange(len(result)):
+            temp_dict = {}
+            for col in xrange(len(column_names)):
+                temp_dict.update({column_names[col]:result[res][col]})
+            return_list.append(temp_dict)
+        dict1 = {'result':return_list}
+        return dict1
+

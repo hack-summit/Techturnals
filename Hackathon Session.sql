@@ -178,3 +178,43 @@ create table VisitN
     FOREIGN KEY (NurseID) REFERENCES Nurse(id)
 );
 
+
+
+INSERT INTO
+  "Dept" (id, name)
+VALUES
+  ('1', 'Neurolist');
+
+INSERT INTO  "Doctor" (BG,Degree,DeptID,DOB,id,ImgLink,LastLogin,LastLogout,LoginToken,name,password,
+    Seniority,
+    Sex,
+    UserName
+  )
+VALUES
+  (
+    'AB+',
+    'BSc',
+    '1',
+    '1997:02:02',
+    '0',
+    'download.png',
+    NULL,
+    NULL,
+    NULL,
+    'Mr. Muhammad Yunus Said',
+    '123',
+    '5',
+    '3 times per day',
+    'abc'
+  );
+
+
+
+  UPDATE
+  "Doctor"
+SET
+  LoginToken = 'Texasaas',
+  LastLogin =date('now')
+WHERE
+  UserName= 'abc';
+

@@ -92,12 +92,9 @@ create TABLE Patient
     name varchar(111),
     DOB datetime,
     BG varchar(4),
-    Height Double
-(7,2),
-    Weight double
-(7,2),
-    Sex varchar
-(111),
+    Height double(7,2),
+    Weight double(7,2),
+    Sex varchar(111),
     LastCheckDate datetime
     );
 

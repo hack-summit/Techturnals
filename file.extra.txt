@@ -1,0 +1,80 @@
+create table tab(name varchar(111))
+create table Dept(id int(111) primary key,name varchar(111))
+insert into tab values ("Dept")
+create table Doctor (id int(111) primary key, name varchar(111),DOB date(), bloodgroup )
+
+
+
+from flask import Flask
+from flask import request
+
+app = Flask(__name__)
+
+@app.route('/users/<user_id>', methods = ['GET', 'POST', 'DELETE'])
+def user(user_id):
+    if request.method == 'GET':
+        """return the information for <user_id>"""
+        .
+        .
+        .
+    if request.method == 'POST':
+        """modify/update the information for <user_id>"""
+        # you can use <user_id>, which is a str but could
+        # changed to be int or whatever you want, along
+        # with your lxml knowledge to make the required
+        # changes
+        data = request.form # a multidict containing POST data
+        .
+        .
+        .
+    if request.method == 'DELETE':
+        """delete user with ID <user_id>"""
+        .
+        .
+        .
+    else:
+        # POST Error 405 Method Not Allowed
+        .
+        .
+        .
+
+
+
+
+
+
+
+import os
+from flask import request, jsonify
+from app import app, mongo
+import logger
+ROOT_PATH = os.environ.get('ROOT_PATH')<br>
+@app.route('/get/questions/', methods=['GET', 'POST','DELETE', 'PATCH'])
+    def question():
+    # request.args is to get urls arguments 
+
+
+    if request.method == 'GET':
+        start = request.args.get('start', default=0, type=int)
+        limit_url = request.args.get('limit', default=20, type=int)
+        questions = mongo.db.questions.find().limit(limit_url).skip(start);
+        data = [doc for doc in questions]
+        return jsonify(isError= False,
+                    message= "Success",
+                    statusCode= 200,
+                    data= data), 200
+
+# request.form to get form parameter
+
+    if request.method == 'POST':
+        average_time = request.form.get('average_time')
+        choices = request.form.get('choices')
+        created_by = request.form.get('created_by')
+        difficulty_level = request.form.get('difficulty_level')
+        question = request.form.get('question')
+        topics = request.form.get('topics')
+
+
+
+
+

@@ -15,4 +15,4 @@
 3. In case a nurse is absent, dotor can alloate the required number of nurses from the free pool.
 4. Whenver a nurse or a patient arrives, the assigned doctor gets a **notification**.
 
-#####Check the branch for the code of each domain.
+##### Check the *branch* for the code of each domain.

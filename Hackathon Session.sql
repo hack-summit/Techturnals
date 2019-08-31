@@ -5,31 +5,38 @@ create TABLE Tab
 
 
 INSERT INTO
-  "tab" (name)
+  "tab"
+    (name)
 VALUES
-  ('Prefernce');
+    ('Prefernce');
 
-  create TABLE Prefernce(
+create TABLE Prefernce
+(
     id int(111) PRIMARY KEY,
     FromValue varchar(111),
     ToValue varchar(111),
-    );
+);
 
 INSERT INTO
-  "tab" (name)
+  "tab"
+    (name)
 VALUES
-  ('Dept');
+    ('Dept');
 
-create TABLE Dept(
+create TABLE Dept
+(
     id int(111),
-    name varchar(111));
+    name varchar(111)
+);
 
 INSERT INTO
-  "tab" (name)
+  "tab"
+    (name)
 VALUES
-  ('Doctor');
+    ('Doctor');
 
-  create TABLE Doctor(
+create TABLE Doctor
+(
     id int(111) PRIMARY KEY,
     name varchar(111),
     DOB datetime,
@@ -44,12 +51,14 @@ VALUES
     LastLogout datetime,
     Sex varchar(111),
     Degree varchar(111),
-    FOREIGN KEY (DeptID) REFERENCES Dept(id));
+    FOREIGN KEY (DeptID) REFERENCES Dept(id)
+);
 
 INSERT INTO
-  "tab" (name)
+  "tab"
+    (name)
 VALUES
-  ('Nurse');
+    ('Nurse');
 
 create TABLE Nurse
 (
@@ -68,7 +77,8 @@ create TABLE Nurse
     DoctorID int(111),
     Degree varchar(111),
     FOREIGN KEY (DeptID) REFERENCES Dept(id),
-    FOREIGN KEY(DoctorID) REFERENCES Doctor(id));
+    FOREIGN KEY(DoctorID) REFERENCES Doctor(id)
+);
 
 INSERT INTO
   "tab"
@@ -82,29 +92,38 @@ create TABLE Patient
     name varchar(111),
     DOB datetime,
     BG varchar(4),
-    Height Double(7,2),
-    Weight double(7,2),
-    Sex varchar(111),
+    Height Double
+(7,2),
+    Weight double
+(7,2),
+    Sex varchar
+(111),
     LastCheckDate datetime
     );
 
 INSERT INTO
- "tab"(name)
- VALUES ('AttendanceN');
+ "tab"
+    (name)
+VALUES
+    ('AttendanceN');
 
- create table AttendanceN (
-     id int(111) PRIMARY KEY,
-     NurseID int(111),
-     DateIn datetime,
-     DateOut datetime,
-     FOREIGN KEY (NurseID) REFERENCES Nurse(id)
- );
+create table AttendanceN
+(
+    id int(111) PRIMARY KEY,
+    NurseID int(111),
+    DateIn datetime,
+    DateOut datetime,
+    FOREIGN KEY (NurseID) REFERENCES Nurse(id)
+);
 
 INSERT INTO
- "tab"(name)
- VALUES ('AttendanceD');
+ "tab"
+    (name)
+VALUES
+    ('AttendanceD');
 
-create table AttendanceD(
+create table AttendanceD
+(
     id int(111) PRIMARY KEY,
     DoctorID int(111),
     DateIn datetime,
@@ -113,10 +132,13 @@ create table AttendanceD(
 );
 
 INSERT INTO
- "tab"(name)
- VALUES ('Appointments');
+ "tab"
+    (name)
+VALUES
+    ('Appointments');
 
-create table Appointments(
+create table Appointments
+(
     id int(111) PRIMARY KEY,
     PatientID int(111),
     DoctorID int(111),
@@ -129,10 +151,13 @@ create table Appointments(
 );
 
 INSERT INTO
- "tab"(name)
- VALUES ('VisitD');
+ "tab"
+    (name)
+VALUES
+    ('VisitD');
 
-create table VisitD(
+create table VisitD
+(
     id int(111) PRIMARY KEY,
     AppointmentID int(111),
     DoctorID int(111),
@@ -144,10 +169,13 @@ create table VisitD(
 );
 
 INSERT INTO
- "tab"(name)
- VALUES ('VisitN');
+ "tab"
+    (name)
+VALUES
+    ('VisitN');
 
-create table VisitN(
+create table VisitN
+(
     id int(111) PRIMARY KEY,
     AppointmentID int(111),
     NurseID int(111),

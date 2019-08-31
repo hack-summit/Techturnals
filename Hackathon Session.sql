@@ -10,12 +10,7 @@ INSERT INTO
 VALUES
     ('Prefernce');
 
-create TABLE Prefernce
-(
-    id int(111) PRIMARY KEY,
-    FromValue varchar(111),
-    ToValue varchar(111),
-);
+create TABLE Prefernce(    id int(111)PRIMARY KEY,    FromValue varchar(111),   ToValue varchar(111));
 
 INSERT INTO
   "tab"

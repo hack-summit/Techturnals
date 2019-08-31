@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "400514964312",
+    "firebase_url": "https://aarushhack.firebaseio.com",
+    "project_id": "aarushhack",
+    "storage_bucket": "aarushhack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400514964312:android:d2cdc7e10e968bb6",
+        "android_client_info": {
+          "package_name": "com.saurabh.aarushhack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400514964312-gcm7ka0hsg5nfj63tthe6ptpf0s48b4s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saurabh.aarushhack",
+            "certificate_hash": "050a48d8fadf72f6526dea20f96d382c50e7fed4"
+          }
+        },
+        {
+          "client_id": "400514964312-uat54qir3571lfftn3k9ev4849l1g0ik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbBPDf5bl0GMFZJQ7M_aVx3DO9UgacoKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400514964312-uat54qir3571lfftn3k9ev4849l1g0ik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

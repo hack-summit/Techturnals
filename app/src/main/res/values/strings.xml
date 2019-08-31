@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AarushHack</string>
+    <string name="ip_address">10.4.32.29</string>
 </resources>
